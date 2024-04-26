@@ -22,6 +22,7 @@ end
 ```
 
 They define these constants:
+
 - `enum.min` - Smallest value in the enum
 - `enum.max` - Biggest value in the enum
 - `enum.sizeof` - Size of the enum type

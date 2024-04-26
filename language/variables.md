@@ -1,5 +1,6 @@
 # Variables
 Variables in Callisto can have any of these types:
+
 - u8 (unsigned 8-bit)
 - i8 (signed 8-bit)
 - u16 (unsigned 16-bit)

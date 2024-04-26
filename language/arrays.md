@@ -24,6 +24,9 @@ Currently, array literals only support numerical values
 
 An array literal will push an `Array` structure to the stack
 
+If you want the literal to be global (which is faster), then you can add a 'c' before
+the '['
+
 ## String literals
 Strings work the same way as arrays, and even use the same structure
 

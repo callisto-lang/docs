@@ -3,6 +3,7 @@ Versions are like the macros in C that you can use with `#ifdef` to compile diff
 
 Each core sets different versions, so the program knows what it is being compiled for.
 These are the versions:
+
 - Linux86: "Linux86", "Linux"
 - RM86: "RM86"
 
