@@ -6,6 +6,8 @@ Documented:
 - [X] core library
 - [X] language features
 
+You can read these docs on the [Callisto webiste](https://callisto.mesyeti.uk/docs)
+
 ## How to use
 Building the docs requires [caldoc](https://github.com/callisto-lang/caldoc) to be
 installed
