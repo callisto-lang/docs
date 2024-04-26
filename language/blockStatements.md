@@ -28,3 +28,6 @@ Like if, the condition also must contain code that leaves a value in the stack. 
 execute the condition, then block over and over until the condition evaluates to 0.
 
 Unlike a do-while statement, the condition is checked before the first iteration
+
+If you want to jump to the condition, you can use the built in `continue` word. If you
+want to break from the loop, you can use the built in `break` word

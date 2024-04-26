@@ -32,3 +32,10 @@ end
 Where NAME is the name of the function
 
 Note: `begin` is there in case I want to add parameters to definitions in the future
+
+If you want the function to be inlined, you can replace the `func` keyword with `inline`.
+This also makes the function act like a macro, so words like `return` will return from
+whatever function the caller is in
+
+## Returning from functions
+Callisto has a built in word called `return`, which will return from the function
