@@ -12,3 +12,6 @@ union NAME
 	...
 end
 ```
+
+You can get the size of a union type by typing `(union name).sizeof` without the
+parantheses
