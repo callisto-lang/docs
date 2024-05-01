@@ -32,6 +32,14 @@ let array SIZE TYPE NAME
 
 This won't create an Array structure, just a variable that is TYPE*SIZE bytes big
 
+After creating a variable, you can put it's address on the stack at any time by
+just typing the identifier, for example:
+
+```
+let cell myCell
+65 myCell !
+```
+
 ## Const statements
 Const statements use this syntax
 ```
