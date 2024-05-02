@@ -52,15 +52,43 @@ Parameters: cell value, addr address
 
 Writes value to address
 
-## c@
+## b@
 Parameters: addr address
 
 Returns the 1 byte value (as a cell) at address
 
-## c!
+## b!
 Parameters: cell value, addr address
 
 Writes value as a byte to address
+
+## w@
+Parameters: addr address
+
+Returns the 2 byte value (as a cell) at address
+
+Requires at least 16-bit cell size
+
+## w!
+Parameters: cell value, addr address
+
+Writes the 2 byte value to address
+
+Requires at least 16-bit cell size
+
+## d@
+Parameters: addr address
+
+Returns the 4 byte value (as a cell) at address
+
+Requires at least 32-bit cell size
+
+## d!
+Parameters: cell value, addr address
+
+Writes the 4 byte value to address
+
+Requires at least 32-bit cell size
 
 ## dup
 Duplicates the top value on the stack
