@@ -22,7 +22,8 @@ For example: `[cell 1 2 3 4 5]`
 
 Currently, array literals only support numerical values
 
-An array literal will push an `Array` structure to the stack
+An array literal will push an address to an `Array` structure, which is allocated on
+the stack
 
 If you want the literal to be global (which is faster), then you can add a 'c' before
 the '['
@@ -35,4 +36,4 @@ String literals just look like this: `"hello world"`
 If you want the literal to be global (which is faster), then you can add a `c` before
 the first "
 
-Like array literals, this pushes an Array structure to the stack
+Like array literals, this pushes an address to an `Array` structure to the stack
