@@ -39,3 +39,21 @@ whatever function the caller is in
 
 ## Returning from functions
 Callisto has a built in word called `return`, which will return from the function
+
+## Function pointers
+You can get the address of a Callisto function using the only unary operator: `&`. It
+works like this:
+
+```
+func foo begin
+
+end
+
+&foo printdec
+```
+
+You can call function pointers that are on the stack with `call`, like this:
+
+```
+50 &printdec call
+```
