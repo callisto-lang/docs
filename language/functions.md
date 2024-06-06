@@ -57,3 +57,13 @@ You can call function pointers that are on the stack with `call`, like this:
 ```
 50 &printdec call
 ```
+
+## Raw functions
+Usually in Callisto, functions get compiled with a certain prefix (`__func__` or `func__`),
+you can disable this by adding `raw` after the `func`/`inline` keyword, like this:
+
+```
+func raw foo begin
+
+end
+```
