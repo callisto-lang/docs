@@ -29,8 +29,8 @@ struct MyStruct
 	cell bar
 end
 
-MyStruct.foo printdec # 0
-MyStruct.bar printdec # 8, if cells are 64-bit
+MyStruct.foo printdec new_line # 0
+MyStruct.bar printdec new_line # 8, if cells are 64-bit
 ```
 
 Structures also define a constant containing the size, which is in the format of
