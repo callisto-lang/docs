@@ -214,3 +214,18 @@ Parameters: File* file, addr buffer, cell count
 Requires: File
 
 Reads count bytes from the given file and writes them to buffer
+
+## core_get_arg
+Parameters: cell which
+
+Requires: Args
+
+Returns the address to a null-terminated string containing the `which`th command-line
+argument
+
+## core_get_arg_length
+Parameters: none
+
+Requires: Args
+
+Returns the number of command-line arguments passed to the program
