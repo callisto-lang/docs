@@ -202,18 +202,25 @@ This function opens a file and pushes the contents of the File structure to the 
 which you can then store in a variable with `file<`
 
 ## file<
-Parameters: File file, File* variable
+Parameters: File* file, File* variable
 
 Requires: File
 
-Writes a file structure from the stack to the given variable
+Copies a file structure from `file` to `variable`
 
 ## file@
 Parameters: File* file, addr buffer, cell count
 
 Requires: File
 
-Reads count bytes from the given file and writes them to buffer
+Reads `count` bytes from the given file and writes them to `buffer`
+
+## file!
+Parameters: File* file, addr buffer, cell count
+
+Requires: File
+
+Writes `count` bytes to the given file from `buffer`
 
 ## core_get_arg
 Parameters: cell which
