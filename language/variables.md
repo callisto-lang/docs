@@ -32,12 +32,32 @@ let array SIZE TYPE NAME
 
 This won't create an Array structure, just a variable that is TYPE*SIZE bytes big
 
-After creating a variable, you can put it's address on the stack at any time by
-just typing the identifier, for example:
+### Reading variables
+To read a variable, you just type the name of the variable. This only works for variables
+with an integer type
+
+Example:
 
 ```
-let cell myCell
-65 myCell !
+let cell foo
+foo printdec
+```
+
+### Writing variables
+To write to a variable, you can use `->`. `->` is a unary operator that pops a cell
+from the stack and writes it to a variable. If needed, the variable will be truncated.
+The syntax looks like this:
+
+```
+-> VARIABLE_NAME
+```
+
+Example:
+
+```
+let cell foo
+10 -> foo
+foo printdec
 ```
 
 ## Const statements
