@@ -9,9 +9,11 @@ mebibyte of it. It has 4 stacks, listed below with the addresses they start at:
 - Array stack (compile-time), starts at `524287` and grows downwards
 
 Some features can't be used with CallistoScript, which are these:
+
 - The `call` word
 - Function pointers
 
 ## How to use
 Compile with one of these backends to use CallistoScript:
+
 - `lua`
