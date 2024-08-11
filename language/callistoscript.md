@@ -1,6 +1,6 @@
 # CallistoScript
 CallistoScript is a subset of Callisto that is made to compile to scripting languages.
-It manages to keep many of it's low-level features, because it still has memory - 1
+It manages to keep many of it's low-level features, because it still has memory, 1
 mebibyte of it. It has 4 stacks, listed below with the addresses they start at:
 
 - Data stack, starts at `1` and grows upwards
