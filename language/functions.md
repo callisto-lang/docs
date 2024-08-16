@@ -23,15 +23,25 @@ Example
 
 ## Function definitions
 Function definitions use this syntax:
+
 ```
-func NAME begin
+func NAME PARAM_TYPE PARAM_NAME ... begin
 
 end
 ```
 
 Where NAME is the name of the function
 
-Note: `begin` is there in case I want to add parameters to definitions in the future
+There can be as many parameters as you want. You can also handle parameters manually
+if you want, which means leaving the parameters part blank.
+
+Example:
+
+```
+func say_num cell num begin
+	num printdec new_line
+end
+```
 
 If you want the function to be inlined, you can replace the `func` keyword with `inline`.
 This also makes the function act like a macro, so words like `return` will return from
