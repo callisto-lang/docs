@@ -12,6 +12,7 @@ Variables in Callisto can have any of these types:
 - size (biggest signed value on current core)
 - usize (biggest unsigned value on current core)
 - cell (size of cells on the stack)
+- bool (cell-sized)
 - Array (see array doc)
 
 It can also be a type that you have defined
