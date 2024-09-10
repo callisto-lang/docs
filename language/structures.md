@@ -19,8 +19,8 @@ If you want to add an array to the structure, you do it like this:
 array LENGTH TYPE NAME
 ```
 
-For each member variable, it will define an offset constant for them. This is used for
-accessing the elements later. The format for these constants is `struct.member`
+For each member variable, it will define an offset constant for them. The format for
+these constants is `struct.member`
 
 Example:
 ```
@@ -35,6 +35,31 @@ MyStruct.bar printdec new_line # 8, if cells are 64-bit
 
 Structures also define a constant containing the size, which is in the format of
 `struct.sizeof`
+
+## Reading members
+To access members, write the struct variable and then the member name. You can also
+use more identifiers for structs inside the struct:
+
+```
+let MyStruct foo
+foo.bar.baz printdec
+```
+
+## Writing members
+Use the `->` syntax, like this:
+
+```
+let MyStruct foo
+5 -> foo.bar.baz
+```
+
+## Get the address of members
+Use the `&` prefix
+
+```
+let MyStruct foo
+&foo.bar.baz printdec
+```
 
 ## Inheritance
 Structures can inherit from 1 structure, and the syntax for that is this:
