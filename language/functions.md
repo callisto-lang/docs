@@ -25,15 +25,15 @@ Example
 Function definitions use this syntax:
 
 ```
-func NAME PARAM_TYPE PARAM_NAME ... begin
+func NAME PARAM_TYPE PARAM_NAME ... -> RETURN_TYPE RETURN_VALUE ... begin
 
 end
 ```
 
 Where NAME is the name of the function
 
-There can be as many parameters as you want. You can also handle parameters manually
-if you want, which means leaving the parameters part blank.
+There can be as many parameters and return values as you want. Return values are only
+for the stack checker.
 
 Example:
 
@@ -41,7 +41,17 @@ Example:
 func say_num cell num begin
 	num printdec new_line
 end
+
+func sum cell a cell b cell c -> cell sum begin
+	a b + c + # note: very slow, don't code like this
+end
 ```
+
+If you want to handle parameters manually, so they get left on the stack, add `man` after
+`func`/`inline`.
+
+If your function has unsafe code (assembly blocks and `call`), add `unsafe` after `func`/`inline`.
+This will make the stack checker skip checking the function definition.
 
 If you want the function to be inlined, you can replace the `func` keyword with `inline`.
 This also makes the function act like a macro, so words like `return` will return from
@@ -67,6 +77,8 @@ You can call function pointers that are on the stack with `call`, like this:
 ```
 50 &printdec call
 ```
+
+Note: `call` can only be used in unsafe code
 
 ## Raw functions
 Usually in Callisto, functions get compiled with a certain prefix (`__func__` or `func__`),
