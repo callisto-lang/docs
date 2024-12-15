@@ -5,7 +5,7 @@ library without any platform dependant code
 Some functions require a certain feature that only some cores have, which is documented
 for each core and the required features are listed here in the docs
 
-## printch
+## print_ch
 Parameters: cell char
 
 Requires: IO
