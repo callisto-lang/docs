@@ -29,12 +29,12 @@ struct MyStruct
 	cell bar
 end
 
-MyStruct.foo printdec new_line # 0
-MyStruct.bar printdec new_line # 8, if cells are 64-bit
+MyStruct.foo print_dec new_line # 0
+MyStruct.bar print_dec new_line # 8, if cells are 64-bit
 ```
 
 Structures also define a constant containing the size, which is in the format of
-`struct.sizeof`
+`struct.sizeOf`
 
 ## Reading members
 To access members, write the struct variable and then the member name. You can also
@@ -42,7 +42,7 @@ use more identifiers for structs inside the struct:
 
 ```
 let MyStruct foo
-foo.bar.baz printdec
+foo.bar.baz print_dec
 ```
 
 ## Writing members
@@ -58,7 +58,7 @@ Use the `&` prefix
 
 ```
 let MyStruct foo
-&foo.bar.baz printdec
+&foo.bar.baz print_dec
 ```
 
 ## Inheritance

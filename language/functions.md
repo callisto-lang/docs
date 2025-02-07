@@ -7,7 +7,7 @@ get called
 Example
 ```
 func sayHi begin
-	"hi" printlstr new_line
+	"hi" print_str new_line
 end
 
 sayHi
@@ -39,7 +39,7 @@ Example:
 
 ```
 func say_num cell num begin
-	num printdec new_line
+	num print_dec new_line
 end
 
 func sum cell a cell b cell c -> cell sum begin
@@ -69,13 +69,13 @@ func foo begin
 
 end
 
-&foo printdec
+&foo print_dec
 ```
 
 You can call function pointers that are on the stack with `call`, like this:
 
 ```
-50 &printdec call
+50 &print_dec call
 ```
 
 Note: `call` can only be used in unsafe code

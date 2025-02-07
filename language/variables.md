@@ -41,7 +41,7 @@ Example:
 
 ```
 let cell foo
-foo printdec
+foo print_dec
 ```
 
 ### Writing variables
@@ -58,7 +58,7 @@ Example:
 ```
 let cell foo
 10 -> foo
-foo printdec
+foo print_dec
 ```
 
 ## Const statements
