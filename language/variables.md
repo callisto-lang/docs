@@ -69,3 +69,30 @@ const NAME VALUE
 
 Constants have no type, as they just work like macros. When you type the name of one,
 it will just replace it with the value of the const.
+
+## Anon statements
+`anon` statements are like `let` but without a variable name. They are anonymous variables.
+
+This is the syntax:
+
+```
+anon TYPE
+
+# or for arrays
+anon array SIZE TYPE
+```
+
+This is useful for allocating space for creating `Arrays`, like this:
+
+```
+let Array arr
+10 cell.sizeOf anon array 10 cell &arr create_array
+```
+
+If you used `let` instead of `anon`, it would look like this:
+
+```
+let Array arr
+let array 10 cell arrayContents
+10 cell.sizeOf &arrayContents &arr create_array
+```
