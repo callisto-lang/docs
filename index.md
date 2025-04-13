@@ -8,3 +8,4 @@ Sections:
 - cores \- This has information about each core
 - language \- This has information about language features
 - std \- This has information about the standard library
+- uxn \- This has information on the uxn/varvara library
