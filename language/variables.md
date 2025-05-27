@@ -1,19 +1,20 @@
 # Variables
 Variables in Callisto can have any of these types:
 
-- u8 (unsigned 8-bit)
-- i8 (signed 8-bit)
-- u16 (unsigned 16-bit)
-- i16 (signed 16-bit)
-- u32 (unsigned 32-bit)
-- i32 (signed 32-bit)
-- u64 (unsigned 64-bit)
-- i64 (signed 64-bit)
-- size (biggest signed value on current core)
-- usize (biggest unsigned value on current core)
-- cell (size of cells on the stack)
-- bool (cell-sized)
-- Array (see array doc)
+- `u8` (unsigned 8-bit)
+- `i8` (signed 8-bit)
+- `u16` (unsigned 16-bit)
+- `i16` (signed 16-bit)
+- `u32` (unsigned 32-bit)
+- `i32` (signed 32-bit)
+- `u64` (unsigned 64-bit)
+- `i64` (signed 64-bit)
+- `isize` (biggest signed value on current core)
+- `usize` (biggest unsigned value on current core)
+- `cell` (size of cells on the stack, unsigned)
+- `icell` (size of cells on the stack, signed)
+- `bool` (cell-sized, unsigned)
+- `Array` (see array doc)
 
 It can also be a type that you have defined
 
