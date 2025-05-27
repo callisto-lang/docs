@@ -4,7 +4,7 @@ to your personal preferences. The characters are:
 
 - `{`
 - `}`
-- `#`
+- `,`
 
 Outside of strings, these are all ignored no matter what. If you really want to,
 you can even use them in the middle of an identifier:
