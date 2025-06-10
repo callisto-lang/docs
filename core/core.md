@@ -190,7 +190,7 @@ Requires: File
 A structure containing info for open files
 
 ## open_file
-Parameters: Array* path, cell mode
+Parameters: ptr Array path, cell mode, ptr File file
 
 Requires: File
 
@@ -201,26 +201,44 @@ mode is a value with one or more of these options OR'd together:
 This function opens a file and pushes the contents of the File structure to the stack,
 which you can then store in a variable with `file<`
 
-## file<
-Parameters: File* file, File* variable
+## close_file
+Parameters: ptr File file
 
 Requires: File
 
-Copies a file structure from `file` to `variable`
+Closes the given file
 
 ## file@
-Parameters: File* file, addr buffer, cell count
+Parameters: addr buffer, cell count, ptr File file
 
 Requires: File
 
 Reads `count` bytes from the given file and writes them to `buffer`
 
 ## file!
-Parameters: File* file, addr buffer, cell count
+Parameters: addr buffer, cell count, ptr File file
 
 Requires: File
 
 Writes `count` bytes to the given file from `buffer`
+
+## file_seek
+Parameters: cell offset, cell whence, ptr File file
+
+Requires: File
+
+Seeks to a specified position in the file.
+
+`whence` must be one of: `SEEK_SET`, `SEEK_CUR`, `SEEK_END`
+
+## file_peek
+Parameters: ptr File file
+
+Returns: cell where
+
+Requires: File
+
+Returns the position that `file` is seeked to
 
 ## core_get_arg
 Parameters: cell which
@@ -236,3 +254,28 @@ Parameters: none
 Requires: Args
 
 Returns the number of command-line arguments passed to the program
+
+## alloc
+Parameters: cell bytes
+
+Returns: addr result
+
+Requires: Heap
+
+Allocates `bytes` bytes of memory and returns the result
+
+## free
+Parameters: addr address
+
+Requires: Heap
+
+Frees the given heap-allocated memory
+
+## realloc
+Parameters: addr address, usize bytes
+
+Returns: addr address
+
+Requires: Heap
+
+Reallocates `address` to be `bytes` bytes in size, and returns the new address.
