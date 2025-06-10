@@ -5,6 +5,15 @@ library without any platform dependant code
 Some functions require a certain feature that only some cores have, which is documented
 for each core and the required features are listed here in the docs
 
+# (Variable) stdin
+A `File` instance using the standard input file
+
+# (Variable) stdout
+A `File` instance using the standard output file
+
+# (Variable) stderr
+A `File` instance using the standard error file
+
 ## print_ch
 Parameters: cell char
 
